@@ -9,7 +9,7 @@ MAINTAINER Rhett <yuanbin2014@gmail.com>
 # install gitbook versions
 RUN gitbook fetch latest
 
-RUN apt-get update; apt-get install awscli
+RUN apt-get update; DEBIAN_FRONTEND=noninteractive apt-get install -y awscli
 
 ENV BOOKDIR /gitbook
 
